@@ -55,7 +55,6 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
 
@@ -64,12 +63,13 @@
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:orientation="vertical">
-
-            <ImageView
+            <ImageButton
+                android:id="@+id/btnPelis"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:src="@drawable/baseline_local_movies_24"></ImageView>
-
+                android:backgroundTint="@color/black"
+                android:src="@drawable/baseline_local_movies_24">
+            </ImageButton>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -77,7 +77,7 @@
                 android:text="Perfil"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
         </LinearLayout>
 
         <LinearLayout
@@ -85,12 +85,13 @@
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:orientation="vertical">
-
-            <ImageView
+            <ImageButton
+                android:id="@+id/btnSeries"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:src="@drawable/baseline_videocam_24"></ImageView>
-
+                android:backgroundTint="@color/black"
+                android:src="@drawable/baseline_videocam_24">
+            </ImageButton>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -98,20 +99,20 @@
                 android:text="Perfil"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:orientation="vertical">
-
-            <ImageView
+            <ImageButton
+                android:id="@+id/btnPerfil"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:src="@drawable/baseline_account_box_24"></ImageView>
-
+                android:backgroundTint="@color/black"
+                android:src="@drawable/baseline_account_box_24">
+            </ImageButton>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -119,8 +120,14 @@
                 android:text="Perfil"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
         </LinearLayout>
+
+
+
+
+
+
 
 
     </LinearLayout>

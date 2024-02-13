@@ -1,5 +1,6 @@
 package com.example.proyectoprctica
 
+
 import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import fetchMovieDetails
 import java.io.IOException
 
 import okhttp3.*
@@ -15,6 +17,7 @@ import okhttp3.*
 
 class PpalActivity : AppCompatActivity() {
     private lateinit var adapter: CustomAdapter02
+
 
 
     @SuppressLint("MissingInflatedId")
@@ -26,7 +29,6 @@ class PpalActivity : AppCompatActivity() {
         Log.d(TAG, "asignacion al layout")
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView2)
         Log.d(TAG, "asignacion al recycleview")
-
 
 
 
