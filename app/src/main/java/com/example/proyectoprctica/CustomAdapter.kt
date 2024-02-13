@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView
 class CustomAdapter(private val context: Context, private val images: List<Int>) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
+
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         //INFLAMOS LO QUE SERA EL ELEMENTO DEL RECYCLEVIEW
         val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.list_item, viewGroup, false)

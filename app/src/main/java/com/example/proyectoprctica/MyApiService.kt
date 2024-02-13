@@ -4,7 +4,7 @@ import okhttp3.*
 import org.json.JSONObject
 import java.io.IOException
 
-
+/*
 
 private val client = OkHttpClient()
 
@@ -92,5 +92,4 @@ fun fetchMovieDetails(movieId: Int) {
 
 
 
-
-
+      */
