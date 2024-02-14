@@ -1,48 +1,34 @@
 package com.example.proyectoprctica
 
-
 import android.annotation.SuppressLint
-import android.content.ContentValues.TAG
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-import java.io.IOException
-
-import okhttp3.*
-
-
-
-class PpalActivity : AppCompatActivity() {
+class PpalAtivity02 : AppCompatActivity() {
     private lateinit var adapter: CustomAdapter02
-    private lateinit var btnSeries: ImageButton
+    private lateinit var btnPelis: ImageButton
     private lateinit var btnPerfil: ImageButton
-
-
-
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ppal)
 
 
-        Log.d(TAG, "asignacion al layout")
+        Log.d(ContentValues.TAG, "asignacion al layout")
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView2)
-        val btnSeries: ImageButton = findViewById(R.id.btnSeries)
+        val btnPelis: ImageButton = findViewById(R.id.btnPelis)
         val btnPerfil: ImageButton = findViewById(R.id.btnPerfil)
-        Log.d(TAG, "asignacion al recycleview")
+        Log.d(ContentValues.TAG, "asignacion al recycleview")
 
 
-
-
-
-        Log.d(TAG, "Define las listas de datos para los RecyclerViews internos")
+        Log.d(ContentValues.TAG, "Define las listas de datos para los RecyclerViews internos")
         val dataLists: List<List<Int>> = listOf(
             listOf(R.drawable.septimosello),
             listOf(R.drawable.centautosdeldesierto, R.drawable.septimosello),
@@ -54,7 +40,7 @@ class PpalActivity : AppCompatActivity() {
 
 
 
-        Log.d(TAG, "Crea una instancia de tu adaptador y configúralo en el RecyclerView principal")
+        Log.d(ContentValues.TAG, "Crea una instancia de tu adaptador y configúralo en el RecyclerView principal")
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -62,7 +48,7 @@ class PpalActivity : AppCompatActivity() {
         recyclerView.setAdapter(adapter)
         //recyclerView.layoutManager = LinearLayoutManager(this)
 
-        btnSeries.setOnClickListener(View.OnClickListener {
+        btnPelis.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, PpalActivity::class.java)
             startActivity(intent)
         })
@@ -71,8 +57,6 @@ class PpalActivity : AppCompatActivity() {
             val intent = Intent(this, PerfilActivity::class.java)
             startActivity(intent)
         })
-
-
 
 
 

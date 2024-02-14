@@ -66,18 +66,19 @@
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/btnPelis"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:backgroundTint="@color/black"
-                android:src="@drawable/baseline_local_movies_24">
-            </ImageButton>
+                android:src="@drawable/baseline_local_movies_24"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></ImageButton>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Perfil"
+                android:text="peliculas"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold"/>
@@ -88,18 +89,19 @@
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/btnSeries"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:backgroundTint="@color/black"
-                android:src="@drawable/baseline_videocam_24">
-            </ImageButton>
+                android:src="@drawable/baseline_videocam_24"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"></ImageButton>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Perfil"
+                android:text="Series"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold"/>
@@ -109,13 +111,14 @@
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/btnPerfil"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:backgroundTint="@color/black"
-                android:src="@drawable/baseline_account_box_24">
-            </ImageButton>
+                android:src="@drawable/baseline_account_box_24"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"></ImageButton>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
