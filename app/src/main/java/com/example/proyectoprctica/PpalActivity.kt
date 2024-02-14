@@ -10,8 +10,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.launch
 
 import java.io.IOException
 
@@ -77,4 +79,6 @@ class PpalActivity : AppCompatActivity() {
 
 
     }
+
+
 }
