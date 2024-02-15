@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,6 +26,7 @@ class PpalActivity : AppCompatActivity() {
     private lateinit var adapter: CustomAdapter02
     private lateinit var btnSeries: ImageButton
     private lateinit var btnPerfil: ImageButton
+    private lateinit var Imagen: ImageView
 
 
 
@@ -38,17 +40,18 @@ class PpalActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView2)
         val btnSeries: ImageButton = findViewById(R.id.btnSeries)
         val btnPerfil: ImageButton = findViewById(R.id.btnPerfil)
+        Imagen = findViewById(R.id.ImageView04)
         Log.d(TAG, "asignacion al recycleview")
 
 
 
 
-
+        Imagen.setImageResource(R.drawable.crack);
         Log.d(TAG, "Define las listas de datos para los RecyclerViews internos")
         val dataLists: List<List<Int>> = listOf(
             listOf(R.drawable.septimosello),
-            listOf(R.drawable.centautosdeldesierto, R.drawable.septimosello),
-            listOf(R.drawable.centautosdeldesierto, R.drawable.septimosello),
+            listOf(R.drawable.centautosdeldesierto, R.drawable.septimosello,R.drawable.centautosdeldesierto, R.drawable.septimosello),
+            listOf(R.drawable.centautosdeldesierto, R.drawable.septimosello,R.drawable.centautosdeldesierto, R.drawable.septimosello),
             listOf(R.drawable.centautosdeldesierto, R.drawable.septimosello),
             listOf(R.drawable.centautosdeldesierto, R.drawable.septimosello),
             // Agrega más listas según sea necesario
