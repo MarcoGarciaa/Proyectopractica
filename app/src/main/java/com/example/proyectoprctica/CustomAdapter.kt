@@ -1,20 +1,20 @@
 package com.example.proyectoprctica
 
-import android.annotation.SuppressLint
 import android.content.Context
-import android.os.Handler
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
-import android.view.animation.AnimationSet
 import android.view.animation.AnimationUtils
-import android.widget.HorizontalScrollView
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+//import android.content.Intent
 
 class CustomAdapter(private val context: Context, private val images: List<Int>) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
@@ -84,21 +84,20 @@ class CustomAdapter(private val context: Context, private val images: List<Int>)
 
 }
 
-class CustomAdapter02(private val context: Context, private val lista: List<List<Int>>) :
+class CustomAdapter02(private val context: Context, private val lista: List<Pair<String, List<List<Any>>>>) :
     RecyclerView.Adapter<CustomAdapter02.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        // Inflamos el diseño del elemento del RecyclerView vertical
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item2, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        // Configuración del RecyclerView horizontal
+        holder.texto.text = lista[position].first // Primer elemento del par, que es un String
         holder.recyclerView.layoutManager = LinearLayoutManager(holder.itemView.context, LinearLayoutManager.HORIZONTAL, false)
 
         // Configuración del adaptador horizontal
-        val adapter = HorizontalAdapter(lista[position])
+        val adapter = HorizontalAdapter(context, lista[position].second.flatten()) // Pasar el contexto
         holder.recyclerView.adapter = adapter
     }
 
@@ -108,10 +107,12 @@ class CustomAdapter02(private val context: Context, private val lista: List<List
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var recyclerView: RecyclerView = itemView.findViewById(R.id.horizontalScrollView)
+        var texto: TextView = itemView.findViewById(R.id.textViewTitulo)
     }
 }
 
-class HorizontalAdapter(private val itemList: List<Int>) : RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
+
+class HorizontalAdapter(private val context: Context, private val itemList: List<Any>) : RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inflamos el diseño del elemento del RecyclerView horizontal
@@ -120,8 +121,28 @@ class HorizontalAdapter(private val itemList: List<Int>) : RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val imageResId = itemList[position]
-        holder.imageView1.setImageResource(imageResId)
+        val item = itemList[position]
+        if (item is Int) {
+            holder.imageView1.setImageResource(item)
+        }
+        holder.imageView1.setOnClickListener {
+            val intent = Intent(context, InfoMovie::class.java).apply {
+                // Acceder a los elementos en itemList
+                val segundoElemento = itemList[position] as? Int ?: 0
+                val tercerElemento = itemList[position + 1] as? String ?: ""
+                val cuartoElemento = itemList[position + 2] as? String ?: ""
+                val quintoElemento = itemList[position + 3] as? String ?: ""
+
+                // Pasar datos de la película a la Activity de detalles
+                putExtra("MOVIE_ID", segundoElemento)
+                putExtra("MOVIE_TITLE", tercerElemento)
+                putExtra("MOVIE_POSTER", cuartoElemento)
+                putExtra("MOVIE_RATE", quintoElemento)
+
+                // Agrega cualquier otro dato que necesites
+            }
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -129,6 +150,6 @@ class HorizontalAdapter(private val itemList: List<Int>) : RecyclerView.Adapter<
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imageView1: ImageView = itemView.findViewById(R.id.imageView)
+        var imageView1: ImageView = itemView.findViewById(R.id.posters)
     }
 }

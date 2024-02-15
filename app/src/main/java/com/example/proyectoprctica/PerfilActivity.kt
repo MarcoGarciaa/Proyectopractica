@@ -50,7 +50,7 @@ class PerfilActivity  : AppCompatActivity()  {
         })
 
         btnSeries.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, PpalActivity02::class.java)
+            val intent = Intent(this, PpalActivity::class.java)
             startActivity(intent)
         })
 

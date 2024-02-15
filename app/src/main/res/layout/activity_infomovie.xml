@@ -1,65 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/black">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="416dp"
-        android:layout_height="660dp"
-        android:background="@color/black"
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="530dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lauraimagen" />
 
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteX="-1dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="530dp"
+        android:background="@drawable/gradiente_difuminado"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/textViewTitulo01"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="170dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="50dp"
+        android:text="Laura"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="540dp">
+    <ImageView
+        android:id="@+id/ImageView02"
+        android:layout_width="120dp"
+        android:layout_height="170dp"
+        android:layout_marginBottom="500dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="220dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/laura__1944_film_poster_" />
 
-                <ImageView
-                    android:id="@+id/ImageView04"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/crack" />
-
-                <TextView
-                    android:id="@+id/textViewTitulo"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="400dp"
-                    android:gravity="center"
-                    android:text="Redescubre los mejores clásicos"
-                    android:textColor="@color/white"
-                    android:textSize="35sp"
-                    android:textStyle="bold" />
-
-            </FrameLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="650dp" />
+    <TextView
+        android:id="@+id/textViewTitulo02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginEnd="40dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="50dp"
+        android:text="CREAR CUENTA"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
 
 
-        </LinearLayout>
-    </ScrollView>
 
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginTop="660dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
 
         <LinearLayout
@@ -75,6 +85,7 @@
                 android:backgroundTint="@color/black"
                 android:src="@drawable/baseline_local_movies_24"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></ImageButton>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -82,7 +93,7 @@
                 android:text="peliculas"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -98,6 +109,7 @@
                 android:backgroundTint="@color/black"
                 android:src="@drawable/baseline_videocam_24"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"></ImageButton>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -105,8 +117,9 @@
                 android:text="Series"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -120,6 +133,7 @@
                 android:backgroundTint="@color/black"
                 android:src="@drawable/baseline_account_box_24"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"></ImageButton>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -127,19 +141,13 @@
                 android:text="Perfil"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
-
-
-
-
-
-
 
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
 
 
 

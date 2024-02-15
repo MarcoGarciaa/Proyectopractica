@@ -10,6 +10,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,7 +28,10 @@ class PpalActivity : AppCompatActivity() {
     private lateinit var adapter: CustomAdapter02
     private lateinit var btnSeries: ImageButton
     private lateinit var btnPerfil: ImageButton
+    private lateinit var btnPelis: ImageButton
     private lateinit var Imagen: ImageView
+    private lateinit var textViewTitulo: TextView
+
 
 
 
@@ -40,6 +45,7 @@ class PpalActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView2)
         val btnSeries: ImageButton = findViewById(R.id.btnSeries)
         val btnPerfil: ImageButton = findViewById(R.id.btnPerfil)
+        val btnPelis: ImageButton = findViewById(R.id.btnPelis)
         Imagen = findViewById(R.id.ImageView04)
         Log.d(TAG, "asignacion al recycleview")
 
@@ -48,15 +54,8 @@ class PpalActivity : AppCompatActivity() {
 
         Imagen.setImageResource(R.drawable.crack);
         Log.d(TAG, "Define las listas de datos para los RecyclerViews internos")
-        val dataLists: List<List<Int>> = listOf(
-            listOf(R.drawable.septimosello),
-            listOf(R.drawable.centautosdeldesierto, R.drawable.septimosello,R.drawable.centautosdeldesierto, R.drawable.septimosello),
-            listOf(R.drawable.centautosdeldesierto, R.drawable.septimosello,R.drawable.centautosdeldesierto, R.drawable.septimosello),
-            listOf(R.drawable.centautosdeldesierto, R.drawable.septimosello),
-            listOf(R.drawable.centautosdeldesierto, R.drawable.septimosello),
-            // Agrega más listas según sea necesario
-        )
 
+        val dataLists = DataProvider.dataLists
 
 
         Log.d(TAG, "Crea una instancia de tu adaptador y configúralo en el RecyclerView principal")
@@ -67,9 +66,17 @@ class PpalActivity : AppCompatActivity() {
         recyclerView.setAdapter(adapter)
         //recyclerView.layoutManager = LinearLayoutManager(this)
 
+
+
+
+
         btnSeries.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, PpalActivity02::class.java)
-            startActivity(intent)
+            Imagen.setImageResource(R.drawable.peaky);
+            textViewTitulo.text = "Las Mejores Series"
+        })
+        btnPelis.setOnClickListener(View.OnClickListener {
+            Imagen.setImageResource(R.drawable.crack);
+            textViewTitulo.text = "Las Mejores Peliculas"
         })
 
         btnPerfil.setOnClickListener(View.OnClickListener {
@@ -82,6 +89,7 @@ class PpalActivity : AppCompatActivity() {
 
 
     }
+
 
 
 }
