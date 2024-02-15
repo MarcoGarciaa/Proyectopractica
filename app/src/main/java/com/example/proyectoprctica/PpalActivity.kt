@@ -68,7 +68,7 @@ class PpalActivity : AppCompatActivity() {
         //recyclerView.layoutManager = LinearLayoutManager(this)
 
         btnSeries.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, PpalActivity::class.java)
+            val intent = Intent(this, PpalActivity02::class.java)
             startActivity(intent)
         })
 

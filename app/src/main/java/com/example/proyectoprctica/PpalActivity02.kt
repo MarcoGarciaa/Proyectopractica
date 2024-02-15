@@ -29,7 +29,7 @@ class PpalActivity02 : AppCompatActivity() {
         btnPerfil = findViewById(R.id.btnPerfil)
         Imagen = findViewById(R.id.ImageView04)
         Log.d(ContentValues.TAG, "asignacion al recycleview")
-        Imagen.setImageResource(R.drawable.);
+        Imagen.setImageResource(R.drawable._2a20a8e36f35);
 
 
         Log.d(ContentValues.TAG, "Define las listas de datos para los RecyclerViews internos")
