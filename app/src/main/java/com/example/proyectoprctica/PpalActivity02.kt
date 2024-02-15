@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,6 +18,7 @@ class PpalActivity02 : AppCompatActivity() {
     private lateinit var btnPelis: ImageButton
     private lateinit var btnPerfil: ImageButton
     private lateinit var Imagen: ImageView
+    private lateinit var textViewTitulo: TextView
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +30,10 @@ class PpalActivity02 : AppCompatActivity() {
         btnPelis = findViewById(R.id.btnPelis)
         btnPerfil = findViewById(R.id.btnPerfil)
         Imagen = findViewById(R.id.ImageView04)
+        textViewTitulo = findViewById(R.id.textViewTitulo)
         Log.d(ContentValues.TAG, "asignacion al recycleview")
-        Imagen.setImageResource(R.drawable._2a20a8e36f35);
+        Imagen.setImageResource(R.drawable.peaky);
+        textViewTitulo.text = "Las Mejores Series"
 
 
         Log.d(ContentValues.TAG, "Define las listas de datos para los RecyclerViews internos")

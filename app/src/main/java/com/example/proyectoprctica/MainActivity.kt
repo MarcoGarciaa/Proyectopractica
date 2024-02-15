@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: CustomAdapter
     private lateinit var btnIniciarSesion: Button
+    private lateinit var btnCrearCuenta: Button
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         recyclerView = findViewById(R.id.recyclerView)
         btnIniciarSesion = findViewById(R.id.btnIniciarSesion)
-
+        btnCrearCuenta = findViewById(R.id.btnCrearCuenta)
 
         recyclerView.setLayoutManager(LinearLayoutManager(this))
 
@@ -45,6 +46,10 @@ class MainActivity : AppCompatActivity() {
 
         btnIniciarSesion.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, loginActivity::class.java)
+            startActivity(intent)
+        })
+        btnCrearCuenta.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, SigninActivity::class.java)
             startActivity(intent)
         })
     }

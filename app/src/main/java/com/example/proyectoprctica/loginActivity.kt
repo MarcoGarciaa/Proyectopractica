@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 
 class loginActivity  : AppCompatActivity() {
@@ -35,7 +36,7 @@ class loginActivity  : AppCompatActivity() {
         btnIniciarSesion = findViewById(R.id.btnIniciarSesion)
         btnCrearCuenta = findViewById(R.id.btnIniciarSesion)
         btnVolver = findViewById(R.id.btnVolver)
-
+        auth = Firebase.auth
 
 
 
@@ -48,7 +49,11 @@ class loginActivity  : AppCompatActivity() {
                             Log.d(TAG, "Autenticacion del ususario Correcta")
 
                             val userId = FirebaseAuth.getInstance().currentUser?.uid
-                            val globalInstance = idUsuario.getInstance()
+                            if (userId != null) {
+                                GlobalVariables.id = userId
+                            }
+
+
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
 
