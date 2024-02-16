@@ -46,6 +46,7 @@ class PpalActivity : AppCompatActivity() {
         val btnSeries: ImageButton = findViewById(R.id.btnSeries)
         val btnPerfil: ImageButton = findViewById(R.id.btnPerfil)
         val btnPelis: ImageButton = findViewById(R.id.btnPelis)
+        val textViewTitulo: TextView = findViewById(R.id.textViewTitulo)
         Imagen = findViewById(R.id.ImageView04)
         Log.d(TAG, "asignacion al recycleview")
 

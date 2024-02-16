@@ -127,7 +127,7 @@ class HorizontalAdapter(private val context: Context, private val itemList: List
         }
         holder.imageView1.setOnClickListener {
             val intent = Intent(context, InfoMovie::class.java).apply {
-                // Acceder a los elementos en itemList
+                /*// Acceder a los elementos en itemList
                 val segundoElemento = itemList[position] as? Int ?: 0
                 val tercerElemento = itemList[position + 1] as? String ?: ""
                 val cuartoElemento = itemList[position + 2] as? String ?: ""
@@ -138,7 +138,7 @@ class HorizontalAdapter(private val context: Context, private val itemList: List
                 putExtra("MOVIE_TITLE", tercerElemento)
                 putExtra("MOVIE_POSTER", cuartoElemento)
                 putExtra("MOVIE_RATE", quintoElemento)
-
+*/
                 // Agrega cualquier otro dato que necesites
             }
             context.startActivity(intent)

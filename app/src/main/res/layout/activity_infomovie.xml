@@ -50,11 +50,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="420dp"
         android:layout_marginEnd="40dp"
         android:paddingStart="30dp"
         android:paddingEnd="50dp"
-        android:text="CREAR CUENTA"
+        android:text="El detective Mark McPherson investiga el asesinato de Laura Hunt, una ejecutiva neoyorquina que vivía rodeada de lujos. Durante la investigación, tratará con el mejor amigo de la fallecida, un columnista arrogante de carácter complicado. Poco a poco, el detective se involucra en exceso en la investigación y acaba por darse cuenta de que se está enamorando de la mujer asesinada"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold" />
