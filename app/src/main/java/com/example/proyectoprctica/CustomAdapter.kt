@@ -120,6 +120,7 @@ class HorizontalAdapter(private val context: Context, private val itemList: List
         return ViewHolder(view)
     }
 
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = itemList[position]
         if (item is Int) {
