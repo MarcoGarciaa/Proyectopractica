@@ -20,6 +20,9 @@ class PerfilActivity  : AppCompatActivity()  {
     private lateinit var textViewTitulo3: com.google.android.material.textfield.TextInputEditText
     private lateinit var btnPelis: ImageButton
     private lateinit var btnSeries: ImageButton
+    private lateinit var btn1: ImageButton
+    private lateinit var btn2: ImageButton
+    private lateinit var btn3: ImageButton
 
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +34,9 @@ class PerfilActivity  : AppCompatActivity()  {
         textViewTitulo3 = findViewById(R.id.textViewTitulo3)
         btnPelis = findViewById(R.id.btnPelis)
         btnSeries = findViewById(R.id.btnSeries)
+        btn1 = findViewById(R.id.btn1)
+        btn2 = findViewById(R.id.btn2)
+        btn3 = findViewById(R.id.btn3)
 
 
         val db = FirebaseFirestore.getInstance()
@@ -53,6 +59,15 @@ class PerfilActivity  : AppCompatActivity()  {
             val intent = Intent(this, PpalActivity::class.java)
             startActivity(intent)
         })
+
+        btnComerciar.setOnClickListener {
+            Log.d(TAG, "Boton comerciar")
+            // Cambiar la visibilidad de las vistas
+            if (vistas[0].visibility == View.VISIBLE) {
+                vistas[0].visibility = View.GONE
+                vistas[1].visibility = View.VISIBLE
+            }
+        }
 
 
 

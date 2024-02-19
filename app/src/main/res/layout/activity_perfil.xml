@@ -12,15 +12,24 @@
         android:layout_height="660dp"
         android:background="@drawable/gradiente_difumiknado2"
         android:orientation="vertical"
+        android:visibility="gone"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="360dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/baseline_build_24" />
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="80dp"
 
             app:cardCornerRadius="60dp">
 
@@ -37,19 +46,20 @@
         <TextView
             android:id="@+id/textViewTitulo"
             android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="40dp"
             android:layout_height="25dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
             android:text="Redescubre los mejores clásicos"
             android:textColor="@color/white"
             android:textSize="22dp"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/textViewTitulo2"
             android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
             android:layout_height="28dp"
             android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
             android:text="Redescubre los mejores clásicos"
             android:textColor="@color/white"
             android:textSize="22dp"
@@ -68,17 +78,79 @@
                 android:id="@+id/textViewTitulo3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:editable="false"
                 android:hint="Contraseña"
                 android:inputType="textPassword"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:editable="false" />
+                android:textColorHint="@color/white" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="660dp"
+        android:background="@drawable/gradiente_difumiknado2"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
+        <Button
+            android:id="@+id/btn1"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="152dp"
+            android:layout_marginEnd="65dp"
+            android:backgroundTint="@color/black"
+            android:elevation="2dp"
+            android:shadowColor="#5C5C5C"
+            android:text="CAMBIAR FOTO"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="5dp"
+            app:strokeColor="#FFFFFF" />
+        <Button
+            android:id="@+id/btn2"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="65dp"
+            android:backgroundTint="@color/black"
+            android:elevation="2dp"
+            android:shadowColor="#5C5C5C"
+            android:text="CAMBIAR CONTRASEÑA"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="5dp"
+            app:strokeColor="#FFFFFF" />
+        <Button
+            android:id="@+id/btn3"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="65dp"
+            android:backgroundTint="@color/black"
+            android:elevation="2dp"
+            android:shadowColor="#5C5C5C"
+            android:text="CERRAR SESION"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="5dp"
+            app:strokeColor="#FFFFFF" />
 
 
     </LinearLayout>
@@ -88,7 +160,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintBottom_toBottomOf="parent">
 
 
         <LinearLayout
@@ -96,13 +168,15 @@
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/btnPelis"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:backgroundTint="@color/black"
-                android:src="@drawable/baseline_local_movies_24">
-            </ImageButton>
+                android:src="@drawable/baseline_local_movies_24"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></ImageButton>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -110,7 +184,7 @@
                 android:text="Peliculas"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -118,13 +192,15 @@
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/btnSeries"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:backgroundTint="@color/black"
-                android:src="@drawable/baseline_videocam_24">
-            </ImageButton>
+                android:src="@drawable/baseline_videocam_24"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></ImageButton>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -132,20 +208,23 @@
                 android:text="Series"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/btnPerfil"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:backgroundTint="@color/black"
-                android:src="@drawable/baseline_account_box_24">
-            </ImageButton>
+                android:src="@drawable/baseline_account_box_24"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></ImageButton>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -153,14 +232,8 @@
                 android:text="Perfil"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
-
-
-
-
-
-
 
 
     </LinearLayout>
