@@ -7,7 +7,7 @@
     android:background="@color/black">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/milinearLayout"
         android:layout_width="match_parent"
         android:layout_height="660dp"
         android:background="@drawable/gradiente_difumiknado2"
@@ -18,6 +18,7 @@
         tools:layout_editor_absoluteY="0dp">
 
         <ImageButton
+            android:id="@+id/ajustes"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="360dp"
@@ -90,7 +91,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/milinearLayout2"
         android:layout_width="match_parent"
         android:layout_height="660dp"
         android:background="@drawable/gradiente_difumiknado2"

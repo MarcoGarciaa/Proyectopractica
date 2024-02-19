@@ -6,8 +6,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
@@ -23,6 +25,9 @@ class PerfilActivity  : AppCompatActivity()  {
     private lateinit var btn1: ImageButton
     private lateinit var btn2: ImageButton
     private lateinit var btn3: ImageButton
+    private lateinit var ajustes: Button
+    private lateinit var milinearLayout: View
+    private lateinit var milinearLayout2: View
 
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +42,9 @@ class PerfilActivity  : AppCompatActivity()  {
         btn1 = findViewById(R.id.btn1)
         btn2 = findViewById(R.id.btn2)
         btn3 = findViewById(R.id.btn3)
+        ajustes = findViewById(R.id.ajustes)
+        milinearLayout = findViewById(R.id.milinearLayout)
+        milinearLayout2 = findViewById(R.id.milinearLayout2)
 
 
         val db = FirebaseFirestore.getInstance()
@@ -60,15 +68,23 @@ class PerfilActivity  : AppCompatActivity()  {
             startActivity(intent)
         })
 
-        btnComerciar.setOnClickListener {
-            Log.d(TAG, "Boton comerciar")
+        ajustes.setOnClickListener {
+
             // Cambiar la visibilidad de las vistas
-            if (vistas[0].visibility == View.VISIBLE) {
-                vistas[0].visibility = View.GONE
-                vistas[1].visibility = View.VISIBLE
+            if (milinearLayout.visibility == View.VISIBLE) {
+                milinearLayout.visibility = View.GONE
+                milinearLayout2.visibility = View.VISIBLE
             }
         }
 
+        btn1.setOnClickListener {
+
+            // Cambiar la visibilidad de las vistas
+            if (milinearLayout.visibility == View.VISIBLE) {
+                milinearLayout.visibility = View.GONE
+                milinearLayout2.visibility = View.VISIBLE
+            }
+        }
 
 
     }
