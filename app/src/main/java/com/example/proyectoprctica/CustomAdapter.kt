@@ -132,6 +132,7 @@ class HorizontalAdapter(private val context: Context, private val itemList: List
                 val TercerElemento = item[2] as? String ?: ""
                 val CuartoElemento = item[3] as? String ?: ""
                 val QuintoElemento = item[4] as? String ?: ""
+                val SextoElemento = item[5] as? String ?: ""
 
                 // Pasar datos de la película a la Activity de detalles
                 putExtra("MOVIE_FHOTO", PrimerElemento)
@@ -139,6 +140,7 @@ class HorizontalAdapter(private val context: Context, private val itemList: List
                 putExtra("MOVIE_NAME", TercerElemento)
                 putExtra("MOVIE_RATE", CuartoElemento)
                 putExtra("MOVIE_RESUMEN", QuintoElemento)
+                putExtra("MOVIE_URL", SextoElemento)
             }
             context.startActivity(intent)
         }

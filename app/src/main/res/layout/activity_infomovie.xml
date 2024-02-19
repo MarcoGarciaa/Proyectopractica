@@ -32,8 +32,9 @@
         android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold" />
+
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="275dp"
@@ -42,11 +43,12 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold" />
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="157dp"
         android:layout_height="35dp"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="275dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="270dp"
         android:layout_marginEnd="170dp"
         android:orientation="horizontal">
 
@@ -54,25 +56,25 @@
             android:id="@+id/star1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp" />
+            android:layout_marginEnd="3dp" />
 
         <ImageView
             android:id="@+id/star2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp" />
+            android:layout_marginEnd="3dp" />
 
         <ImageView
             android:id="@+id/star3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp" />
+            android:layout_marginEnd="3dp" />
 
         <ImageView
             android:id="@+id/star4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp" />
+            android:layout_marginEnd="3dp" />
 
         <ImageView
             android:id="@+id/star5"
@@ -80,6 +82,24 @@
             android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+
+    <Button
+        android:id="@+id/trailer"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="170dp"
+        android:elevation="2dp"
+        android:shadowColor="#5C5C5C"
+        android:text="Trailer"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:strokeColor="#FFFFFF" />
 
 
     <ImageView
@@ -100,8 +120,7 @@
         android:layout_marginTop="420dp"
         android:layout_marginEnd="40dp"
         android:paddingStart="30dp"
-        android:paddingEnd="50dp"
-        android:text=""
+        android:text="El detective Mark McPherson investiga el asesinato de Laura Hunt, una ejecutiva neoyorquina que vivía rodeada de lujos. Durante la investigación, tratará con el mejor amigo de la fallecida, un columnista arrogante de carácter complicado. Poco a poco, el detective se involucra en exceso en la investigación y acaba por darse cuenta de que se está enamorando de la mujer asesinada"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold" />
