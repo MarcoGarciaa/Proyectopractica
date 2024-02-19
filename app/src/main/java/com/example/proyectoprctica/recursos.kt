@@ -10,25 +10,14 @@ object GlobalVariables {
 // Clase auxiliar para almacenar datos estáticos
 object DataProvider {
 
-    val dataLists: List<Pair<String, List<List<Any>>>> = listOf(
+    val dataLists: List<Pair<String, List<List<List<Any>>>>> = listOf(
         Pair("Accion", listOf(
-            listOf(R.drawable.laura__1944_film_poster_, "texto1", "texto2", "texto3"),
-            listOf(R.drawable.centautosdeldesierto, "texto4", "texto5", "texto6")
-        )),
-        Pair("Comedia", listOf(
-            listOf(R.drawable.centautosdeldesierto, "texto7", "texto8", "texto9"),
-            listOf(R.drawable.onceuponatime, "texto10", "texto11", "texto12"),
-            listOf(R.drawable.tesis, "texto10", "texto11", "texto12")
-        )),
-        Pair("Terror", listOf(
-            listOf(R.drawable.centautosdeldesierto, "texto7", "texto8", "texto9"),
-            listOf(R.drawable.centautosdeldesierto, "texto10", "texto11", "texto12")
-        )),
-        Pair("Cine Negro", listOf(
-            listOf(R.drawable.centautosdeldesierto, "texto7", "texto8", "texto9"),
-            listOf(R.drawable.centautosdeldesierto, "texto10", "texto11", "texto12")
-        ))
-    )
+            listOf(
+                listOf(R.drawable.laura__1944_film_poster_, R.drawable.lauraimagen, "Laura", "5.4", "El detective Mark McPherson investiga el asesinato de Laura Hunt, una ejecutiva neoyorquina que vivía rodeada de lujos. Durante la investigación, tratará con el mejor amigo de la fallecida, un columnista arrogante de carácter complicado. Poco a poco, el detective se involucra en exceso en la investigación y acaba por darse cuenta de que se está enamorando de la mujer asesinada"),
+                listOf(R.drawable.laura__1944_film_poster_, R.drawable.lauraimagen, "Laura", "6.8", "texto5")
+            ))
 
+        )
+        )
 
 }

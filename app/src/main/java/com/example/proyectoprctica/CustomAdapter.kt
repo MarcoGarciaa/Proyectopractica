@@ -84,7 +84,7 @@ class CustomAdapter(private val context: Context, private val images: List<Int>)
 
 }
 
-class CustomAdapter02(private val context: Context, private val lista: List<Pair<String, List<List<Any>>>>) :
+class CustomAdapter02(private val context: Context, private val lista: List<Pair<String, List<List<List<Any>>>>>) :
     RecyclerView.Adapter<CustomAdapter02.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -111,8 +111,7 @@ class CustomAdapter02(private val context: Context, private val lista: List<Pair
     }
 }
 
-
-class HorizontalAdapter(private val context: Context, private val itemList: List<Any>) : RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
+class HorizontalAdapter(private val context: Context, private val itemList: List<List<Any>>) : RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inflamos el diseño del elemento del RecyclerView horizontal
@@ -120,27 +119,26 @@ class HorizontalAdapter(private val context: Context, private val itemList: List
         return ViewHolder(view)
     }
 
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = itemList[position]
-        if (item is Int) {
-            holder.imageView1.setImageResource(item)
+        if (item.isNotEmpty() && item[0] is Int) {
+            holder.imageView1.setImageResource(item[0] as Int)
         }
         holder.imageView1.setOnClickListener {
             val intent = Intent(context, InfoMovie::class.java).apply {
-                /*// Acceder a los elementos en itemList
-                val segundoElemento = itemList[position] as? Int ?: 0
-                val tercerElemento = itemList[position + 1] as? String ?: ""
-                val cuartoElemento = itemList[position + 2] as? String ?: ""
-                val quintoElemento = itemList[position + 3] as? String ?: ""
+                // Acceder a los elementos en itemList
+                val PrimerElemento = item[0] as? Int ?: 0
+                val SegundoElemento = item[1] as? Int ?: 0
+                val TercerElemento = item[2] as? String ?: ""
+                val CuartoElemento = item[3] as? String ?: ""
+                val QuintoElemento = item[4] as? String ?: ""
 
                 // Pasar datos de la película a la Activity de detalles
-                putExtra("MOVIE_ID", segundoElemento)
-                putExtra("MOVIE_TITLE", tercerElemento)
-                putExtra("MOVIE_POSTER", cuartoElemento)
-                putExtra("MOVIE_RATE", quintoElemento)
-*/
-                // Agrega cualquier otro dato que necesites
+                putExtra("MOVIE_FHOTO", PrimerElemento)
+                putExtra("MOVIE_FHOTO2", SegundoElemento)
+                putExtra("MOVIE_NAME", TercerElemento)
+                putExtra("MOVIE_RATE", CuartoElemento)
+                putExtra("MOVIE_RESUMEN", QuintoElemento)
             }
             context.startActivity(intent)
         }

@@ -33,8 +33,6 @@ class PpalActivity : AppCompatActivity() {
     private lateinit var textViewTitulo: TextView
 
 
-
-
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

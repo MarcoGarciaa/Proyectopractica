@@ -44,23 +44,21 @@ class loginActivity  : AppCompatActivity() {
             btnIniciarSesion.setOnClickListener{
                     if (Email.text.isNotEmpty() && Password.text.isNotEmpty()){
                         auth.signInWithEmailAndPassword(Email.text.toString(), Password.text.toString()).addOnCompleteListener(this) { task ->
-                        if (task.isSuccessful) {
-
-                            Log.d(TAG, "Autenticacion del ususario Correcta")
-
-                            val userId = FirebaseAuth.getInstance().currentUser?.uid
+                            if (task.isSuccessful) {
+                                Log.d(TAG, "Autenticacion del ususario Correcta")
+                                val userId = FirebaseAuth.getInstance().currentUser?.uid
                             if (userId != null) {
                                 GlobalVariables.id = userId
                             }
 
 
-                            val intent = Intent(this, MainActivity::class.java)
+                            val intent = Intent(this, PpalActivity::class.java)
                             startActivity(intent)
 
                         }
                         else {
                             val builder = AlertDialog.Builder(this)
-                            builder.setTitle("Error")
+                            builder.setTitle("Error!")
                             builder.setMessage("Se ha producido un error en la autenticacion del ususario")
                             builder.setPositiveButton("Aceptar",null)
                             val dialog: AlertDialog = builder.create()
