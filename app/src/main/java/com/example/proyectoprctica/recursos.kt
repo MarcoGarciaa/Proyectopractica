@@ -17,7 +17,7 @@ object DataProvider {
                 listOf(R.drawable.junglaasfalto1, R.drawable.junglaasfalto2, "The Asphalt Jungle", "7.8", "Un importante atraco se lleva a cabo según lo planeado, hasta que la mala suerte y las traiciones hacen que todo se venga abajo.","https://youtu.be/IXrP6Uo4nUI?si=3lYiwbR0twnR5u--"),
                 listOf(R.drawable.confieso171g8myktrpl__ac_uf894_1000_ql80_, R.drawable.confieso2450_1000, "I Confess", "7.6", "Un sacerdote que respeta la santidad del confesionario, es enjuiciado por el asesinato cometido por uno de sus parroquianos. Para salvar su vida, el sacerdote se niega a revelar la confesión del verdadero asesino","https://youtu.be/NiajVY-f99s?si=RQ8y5v480yTbmarn"),
 
-                listOf(R.drawable.laura__1944_film_poster_, R.drawable.lauraimagen, "The Asphalt Jungle", "7.8", "","")
+                listOf(R.drawable.laura__1944_film_poster_, R.drawable.lauraimagen, "Más allá de la duda", "7.1", "Más allá de la duda es una película británica de 1956 con guion de Douglas Morrow, dirección de Fritz Lang y actuación de Dana Andrews y Joan Fontaine.","https://youtu.be/vv0JL5Oo7I8?si=mSzqiYg9QNdyhnUl")
 
             ))
 
