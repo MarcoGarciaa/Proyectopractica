@@ -1,5 +1,4 @@
 package com.example.proyectoprctica
-
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
@@ -14,10 +13,7 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.firestore.FirebaseFirestore
-
-
 class SigninActivity : AppCompatActivity() {
-
     private lateinit var editTextEmail : EditText
     private lateinit var editTextName : EditText
     private lateinit var editTextPassword : EditText
@@ -26,7 +22,6 @@ class SigninActivity : AppCompatActivity() {
     private lateinit var textViewWarning : TextView
     private lateinit var btnVolver : Button
     private lateinit var auth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
@@ -38,11 +33,8 @@ class SigninActivity : AppCompatActivity() {
         btnVolver = findViewById(R.id.btnVolver)
         textViewWarning = findViewById(R.id.textViewWarning)
         auth = Firebase.auth
-
-
         try {
             btnCrearCuenta.setOnClickListener{
-
                 if (editTextEmail.text.isNotEmpty() && editTextPassword.text.isNotEmpty() && editTextPassword.text.isNotEmpty()){
 
                     if(editTextEmail.text.toString().contains('@') && editTextEmail.text.toString().contains('.')){
@@ -76,12 +68,10 @@ class SigninActivity : AppCompatActivity() {
             Log.d(TAG, "Error no esperado")
         }
 
-
         btnVolver.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         })
-
     }
     fun crearUsuario(){
         auth.createUserWithEmailAndPassword(editTextEmail.text.toString(), editTextPassword.text.toString()).addOnCompleteListener(this) { task ->
@@ -100,17 +90,10 @@ class SigninActivity : AppCompatActivity() {
                             "Contraseña" to editTextPassword.text.toString()
                             )
                     )
-
-
-
-
                 } else {
                     Log.d(TAG, "El usuario no está autenticado. Manejar el error apropiadamente")
                 }
-
-
                 val intent = Intent(this, PpalActivity::class.java)
-
                 startActivity(intent)
             } else {
                 textViewWarning.text = "Usuario No Encontrado"

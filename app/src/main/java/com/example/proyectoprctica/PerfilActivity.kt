@@ -103,7 +103,7 @@ class PerfilActivity  : AppCompatActivity()  {
             }
         }
 
-        btn1.setOnClickListener {
+        ajustes.setOnClickListener {
 
             // Cambiar la visibilidad de las vistas
             if (milinearLayout.visibility == View.VISIBLE) {
@@ -111,9 +111,10 @@ class PerfilActivity  : AppCompatActivity()  {
                 milinearLayout2.visibility = View.VISIBLE
             }
         }
-        btn1.setOnClickListener {
-
-         //   db.signOut();
+        btn3.setOnClickListener {
+            finishAffinity();
+            val intent = Intent(this, loginActivity::class.java)
+            startActivity(intent)
         }
 
 

@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyectoprctica.DataProvider.dataListsSeries
 import kotlinx.coroutines.launch
 
 import java.io.IOException
@@ -72,10 +73,14 @@ class PpalActivity : AppCompatActivity() {
         btnSeries.setOnClickListener(View.OnClickListener {
             Imagen.setImageResource(R.drawable.peaky);
             textViewTitulo.text = "Las Mejores Series"
+            adapter = CustomAdapter02(this, dataListsSeries)
+            recyclerView.setAdapter(adapter)
         })
         btnPelis.setOnClickListener(View.OnClickListener {
             Imagen.setImageResource(R.drawable.crack);
             textViewTitulo.text = "Las Mejores Peliculas"
+            adapter = CustomAdapter02(this, dataLists)
+            recyclerView.setAdapter(adapter)
         })
 
         btnPerfil.setOnClickListener(View.OnClickListener {

@@ -4,9 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <androidx.appcompat.widget.LinearLayoutCompat
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradiente_difumiknado2"
@@ -14,8 +12,6 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
-
-        <!--TITULO-->
         <TextView
             android:id="@+id/textViewTitulo"
             android:layout_width="match_parent"
@@ -30,15 +26,12 @@
             android:textColor="@color/white"
             android:textSize="34sp"
             android:textStyle="bold" />
-
-        <!--USERNAME-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="150dp"
             android:layout_marginRight="40dp">
-
             <EditText
                 android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
@@ -51,10 +44,7 @@
                 android:inputType="textEmailAddress"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white" />
-
         </com.google.android.material.textfield.TextInputLayout>
-
-        <!--PASSWORD-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,7 +52,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="40dp"
             app:passwordToggleEnabled="true">
-
             <EditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
@@ -75,11 +64,7 @@
                 android:inputType="textPassword"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white" />
-
         </com.google.android.material.textfield.TextInputLayout>
-
-
-        <!--Text View Warning-->
         <TextView
             android:id="@+id/textViewWarning"
             android:layout_width="match_parent"
@@ -96,8 +81,6 @@
             android:textColor="@color/white"
             android:textSize="15sp"
             android:visibility="gone" />
-
-        <!--BUTON LOGIN-->
         <Button
             android:id="@+id/btnIniciarSesion"
             style="?attr/materialButtonOutlinedStyle"
@@ -114,8 +97,6 @@
             android:textStyle="bold"
             app:cornerRadius="5dp"
             app:strokeColor="@color/white" />
-
-        <!--BUTON SIGN IN-->
         <Button
             android:id="@+id/btnVolver"
             style="?attr/materialButtonOutlinedStyle"
@@ -132,7 +113,5 @@
             android:textStyle="bold"
             app:cornerRadius="5dp"
             app:strokeColor="@color/white" />
-
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

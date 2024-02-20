@@ -1,5 +1,4 @@
 package com.example.proyectoprctica
-
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.ContentValues.TAG
@@ -14,8 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
-
-
 class loginActivity  : AppCompatActivity() {
     //VARIABLES
     private lateinit var Email : EditText
@@ -25,20 +22,16 @@ class loginActivity  : AppCompatActivity() {
     private lateinit var btnVolver: Button
     private lateinit var textViewWarning: TextView
     private lateinit var auth: FirebaseAuth
-
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
         Email = findViewById(R.id.editTextEmail)
         Password = findViewById(R.id.editTextPassword)
         btnIniciarSesion = findViewById(R.id.btnIniciarSesion)
         btnCrearCuenta = findViewById(R.id.btnIniciarSesion)
         btnVolver = findViewById(R.id.btnVolver)
         auth = Firebase.auth
-
-
 
         try {
             btnIniciarSesion.setOnClickListener{
@@ -51,35 +44,28 @@ class loginActivity  : AppCompatActivity() {
                                 GlobalVariables.id = userId
                             }
 
-
                             val intent = Intent(this, PpalActivity::class.java)
                             startActivity(intent)
 
                         }
                         else {
                             val builder = AlertDialog.Builder(this)
-                            builder.setTitle("Error!")
-                            builder.setMessage("Se ha producido un error en la autenticacion del ususario")
+                            builder.setTitle("Error")
+                            builder.setMessage("Usuario o Contraseña Incorrecta")
                             builder.setPositiveButton("Aceptar",null)
                             val dialog: AlertDialog = builder.create()
                             dialog.show()
                         }
                     }
-
                 }else{ Log.d(TAG, "Debes rellenar los campos") }
-
             }
         } catch (e: Exception) {
             Log.d(TAG, "Error en la autentificacion del usuario")
         }
-
         btnVolver.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         })
-
     }
-
-
 
 }
